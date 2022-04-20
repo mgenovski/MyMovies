@@ -13,28 +13,9 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/:movieId', async (req, res) => {
-    try {
-        const itemId = req.params.movieId;
-        const data = await api.getOne(itemId);
-
-        if(data.length === 0) {
-            res.status(400).json({ favorite: false });
-        }
-
-        res.status(200).json({ favorite: true });
-    } catch (err) {
-        console.error(err.message);
-        const error = mapErrors(err);
-        res.status(400).json({ message: error });
-    }
-});
-
-router.post('/:movieId', async (req, res) => {
-    const movieId = req.params.movieId;
-    const item = {
-        movieId: movieId
-    };
+router.post('/', async (req, res) => {
+    const movieId = req.body.movieId;
+    const item = { movieId };
 
     try {
         const result = await api.add(item);
@@ -46,6 +27,22 @@ router.post('/:movieId', async (req, res) => {
     }
 });
 
+router.get('/:movieId', async (req, res) => {
+    try {
+        const itemId = req.params.movieId;
+        const data = await api.getOne(itemId);
+
+        if (data.length === 0) {
+            res.status(400).json({ favorite: false });
+        }
+
+        res.status(200).json({ favorite: true });
+    } catch (err) {
+        console.error(err.message);
+        const error = mapErrors(err);
+        res.status(400).json({ message: error });
+    }
+});
 
 router.delete('/:movieId', async (req, res) => {
     try {
