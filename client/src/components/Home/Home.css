@@ -25,9 +25,24 @@
 }
 .favorites {
     text-align: center;
-    padding: 20px 0;
+    padding: 0 100px;
+    margin-bottom: 40px;
 }
 .favorites h2 {
-    font-size: 1.6em;
-    font-weight: bold;
+    font-size: 2em;
+    margin: 40px;
+}
+.favorites img {
+    width: 100%;
+    aspect-ratio: 2/3;
+}
+
+.favorite-cards {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 30px
+}
+
+.favorite-cards a {
+    display: block;
 }

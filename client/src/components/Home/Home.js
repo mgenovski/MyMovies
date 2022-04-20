@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import './Home.css';
+import Favorites from './Favorites.js';
 
 const Home = () => {
     return (
@@ -13,9 +14,7 @@ const Home = () => {
                     <Button component={Link} variant="contained" to="/search">Search</Button>
                 </div>
             </div>
-            <div className='favorites'>
-                <h2>Your Favorites</h2>
-            </div>
+            <Favorites />
         </>
     );
 };
