@@ -13,6 +13,26 @@ router.get('/', async (req, res) => {
     }
 });
 
+
+router.post('/', async (req, res) => {
+    const movieId = req.body.movieId;
+    const rating = req.body.rating;
+    const item = {
+        movieId,
+        rating
+    };
+
+    try {
+        const result = await api.edit(item);
+        res.status(201).json(result);
+    } catch (err) {
+        console.error(err.message);
+        const error = mapErrors(err);
+        res.status(400).json({ message: error });
+    }
+});
+
+
 router.get('/:movieId', async (req, res) => {
     try {
         const itemId = req.params.movieId;
@@ -30,17 +50,12 @@ router.get('/:movieId', async (req, res) => {
     }
 });
 
-router.post('/', async (req, res) => {
-    const movieId = req.body.movieId;
-    const rating = req.body.rating;
-    const item = {
-        movieId,
-        rating
-    };
 
+router.delete('/:movieId', async (req, res) => {
     try {
-        const result = await api.edit(item);
-        res.status(201).json(result);
+        const itemId = req.params.movieId;
+        await api.deleteById(itemId);
+        res.status(204).end();
     } catch (err) {
         console.error(err.message);
         const error = mapErrors(err);

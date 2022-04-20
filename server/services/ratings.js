@@ -28,8 +28,13 @@ async function edit(item) {
 
 }
 
+async function deleteById(movieId) {
+    await Rating.deleteOne({ movieId: movieId });
+}
+
 module.exports = {
     getAll,
     getOne,
-    edit
+    edit,
+    deleteById
 };
