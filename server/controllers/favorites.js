@@ -32,7 +32,7 @@ router.get('/:movieId', async (req, res) => {
         const itemId = req.params.movieId;
         const data = await api.getOne(itemId);
 
-        if (data.length === 0) {
+        if (!data) {
             res.status(400).json({ favorite: false });
         }
 
