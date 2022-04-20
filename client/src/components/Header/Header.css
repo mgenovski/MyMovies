@@ -1,5 +1,18 @@
 header {
     width: 100%;
-    border-bottom: 1px solid black;
-    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: #F5F5F5;
+}
+
+.logo {
+    padding: 10px 0;
+}
+
+.logo a {
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #333;
 }
