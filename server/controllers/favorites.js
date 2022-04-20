@@ -15,7 +15,8 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
     const movieId = req.body.movieId;
-    const item = { movieId };
+    const imgUrl = req.body.imgUrl;
+    const item = { movieId, imgUrl };
 
     try {
         const result = await api.add(item);
