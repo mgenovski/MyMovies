@@ -1,0 +1,33 @@
+.hero {
+    width: 100%;
+    aspect-ratio: 3/1;
+    display: flex;
+    align-items: center;
+    background-image: url('../../images/hero-bg.webp');
+    background-size: cover;
+    background-position: center center;
+    text-shadow: 0px 0px 4px rgba(0,0,0,0.6);
+    color: rgb(222, 216, 216);
+}
+.hero-text {
+    width: 45%;
+    padding: 50px;
+}
+.hero h1 {
+    font-size: 1.6em;
+    font-weight: bold;
+    padding-bottom: 20px;
+    display: block;
+}
+.hero p {
+    font-size: 1em;
+    padding-bottom: 20px;
+}
+.favorites {
+    text-align: center;
+    padding: 20px 0;
+}
+.favorites h2 {
+    font-size: 1.6em;
+    font-weight: bold;
+}
