@@ -1,9 +1,11 @@
+import SearchBar from '../Common/SearchBar/SearchBar.js';
 import './Search.css';
 
 const Search = () => {
     return (
         <>
-        search page
+        <h2>Search</h2>
+        <SearchBar />
         </>
     );
 };
