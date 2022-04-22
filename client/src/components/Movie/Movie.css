@@ -12,3 +12,15 @@
     font-size: 2em;
     margin-bottom: 20px;
 }
+
+.review textarea {
+    margin: 30px 0;
+    width: 50%;
+    height: 150px;
+    display: block;
+    border-radius: 7px;
+    border: 1px solid #ccc;
+    color: #666;
+    resize: none;
+    padding: 10px;
+}
