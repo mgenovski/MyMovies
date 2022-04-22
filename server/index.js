@@ -26,7 +26,7 @@ async function start() {
     app.use(express.json());
     app.use(cors());
     app.use('/search', searchController);
-    app.use('/movie', movieController);
+    app.use('/movies', movieController);
     app.use('/favorites', favoriteController);
     app.use('/notes', noteController);
     app.use('/ratings', ratingController);
