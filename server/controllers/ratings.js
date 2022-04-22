@@ -39,7 +39,7 @@ router.get('/:movieId', async (req, res) => {
         const data = await api.getOne(itemId);
 
         if(!data) {
-            return res.status(400).json({ message: 'not found' });
+            return res.status(200).json({ message: 'not found' });
         }
 
         res.status(200).json(data);
