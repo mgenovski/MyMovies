@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import FavoriteButton from '../FavoriteButton/FavoriteButton.js';
 import './MovieCard.css'
 
 const MovieCard = ({ movie }) => {
@@ -14,7 +15,7 @@ const MovieCard = ({ movie }) => {
             </div>
             <div className='movie-info'>
                 <h3>
-                    <Link to={`/movies/${movie.id}`}>{movie.name} ({movie.premiered.substring(0, 4)})</Link>
+                    <Link to={`/movies/${movie.id}`}>{movie.name} ({movie.premiered?.substring(0, 4)})</Link>
                 </h3>
                 <p>
                     {movie.genres.join(', ')}
@@ -25,6 +26,10 @@ const MovieCard = ({ movie }) => {
                     {movie.summary?.replace(/<[^>]*>/g, '').slice(0, 700).length === 700 ? '...' : ''}
                 </p>
                 <p><a href={movie.officialSite ? movie.officialSite : movie.url} target="_blank" rel="noreferrer">Visit official site</a></p>
+                <FavoriteButton
+                    movieId={movie.id}
+                    imgUrl={movie.image?.original ? movie.image.original : 'https://fanart369.com/wp-content/themes/barberry/images/placeholder.jpg'}
+                />
             </div>
         </div>
     )

@@ -1,0 +1,18 @@
+.favorite-button {
+    border-radius: 7px; 
+    background-color: inherit;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.add-to-favorites {
+    border: 1px solid green;
+    color: green;
+    padding: 15px 20px;
+}
+
+.remove-from-favorites {
+    border: 1px solid red;
+    color: red;
+    padding: 15px 10px;
+}
