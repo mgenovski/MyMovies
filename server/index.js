@@ -33,5 +33,5 @@ async function start() {
 
     app.get('/', (req, res) => res.json({ message: 'REST service operational'}));
 
-    app.listen(3030, () => console.log('REST service started on port 3030'));
+    app.listen(3030, () => console.log('REST service started on port 3030 - http://localhost:3030'));
 }
