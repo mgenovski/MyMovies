@@ -28,27 +28,11 @@ router.post('/', async (req, res) => {
     }
 });
 
-router.get('/:movieId', async (req, res) => {
-    try {
-        const itemId = Number(req.params.movieId);
-        const data = await api.getOne(itemId);
-        if (data.length === 0) {
-            res.status(400).json({ favorite: false });
-        }
-
-        res.status(200).json({ favorite: true });
-    } catch (err) {
-        console.error(err.message);
-        const error = mapErrors(err);
-        res.status(400).json({ message: error });
-    }
-});
-
 router.delete('/:movieId', async (req, res) => {
     try {
         const itemId = req.params.movieId;
         await api.deleteById(itemId);
-        res.status(204).end();
+        res.status(200).json({ message: 'Movie deleted' });
     } catch (err) {
         console.error(err.message);
         const error = mapErrors(err);
