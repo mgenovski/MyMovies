@@ -30,10 +30,9 @@ router.post('/', async (req, res) => {
 
 router.get('/:movieId', async (req, res) => {
     try {
-        const itemId = req.params.movieId;
+        const itemId = Number(req.params.movieId);
         const data = await api.getOne(itemId);
-
-        if (!data) {
+        if (data.length === 0) {
             res.status(400).json({ favorite: false });
         }
 
