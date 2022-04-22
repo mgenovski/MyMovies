@@ -1,10 +1,25 @@
 import './SearchBar.css'
+import { useNavigate } from 'react-router-dom';
 
 const SearchBar = () => {
+
+    const navigate = useNavigate();
+
+    const onSearch = e => {
+        e.preventDefault();
+        const form = e.currentTarget;
+        let formData = new FormData(form);
+        const title = formData.get('title');
+        form.reset();
+        navigate(`/search/${encodeURIComponent(title.trim())}`);
+    };
+
     return (
         <div className='bar'>
-            <input type="text" id="search" placeholder='Search by movie title...' name="search" />
-            <button>Search</button>
+            <form onSubmit={onSearch}>
+                <input type="text" id="title" placeholder='Search by movie title...' name="title" />
+                <button>Search</button>
+            </form>
         </div>
     );
 };

@@ -1,0 +1,40 @@
+.movie-card {
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+}
+.movie-image {
+    width: 20%;
+    min-width: 200px;
+    display: block;
+}
+.movie-card img {
+    width: 100%;
+    aspect-ratio: 2/3;
+}
+
+.movie-info {
+    flex: 1;
+    text-align: justify;
+    padding-left: 40px;
+}
+
+.movie-info h3 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.movie-info p {
+    margin: 20px 0;
+    font-size: 0.9em;
+}
+
+.movie-info p a {
+    color: #0066CC;
+    text-decoration: underline;
+}
+
+.movie-card h3 a, .movie-image a {
+    text-decoration: none;
+    color: inherit;
+}
