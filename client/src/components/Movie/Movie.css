@@ -1,0 +1,14 @@
+.movie {
+    text-align: left;
+}
+
+.review {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.review h3 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}

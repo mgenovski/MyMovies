@@ -18,8 +18,8 @@ const MovieCard = ({ movie }) => {
                     <Link to={`/movies/${movie.id}`}>{movie.name} ({movie.premiered?.substring(0, 4)})</Link>
                 </h3>
                 <p>
-                    {movie.genres.join(', ')}
-                    {movie.genres.length > 0 && movie.runtime != null ? ' | ' : ''}
+                    {movie.genres?.join(', ')}
+                    {movie.genres?.length > 0 && movie.runtime != null ? ' | ' : ''}
                     {movie.runtime != null ? `${movie.runtime} minutes` : ''}</p>
                 <p>
                     {movie.summary?.replace(/<[^>]*>/g, '').slice(0, 700)}
