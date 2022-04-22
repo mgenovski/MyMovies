@@ -11,7 +11,8 @@ Pre-Interview Assignment
 - Rest Service
 - Express.js
 - MongoDB / Mongoose
-- Endpoints:
+
+### Endpoints:
   1. /search
     - GET - /search/:title - Search movies by title
   2. /movie
