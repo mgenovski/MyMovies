@@ -23,7 +23,7 @@ const SearchResults = () => {
 
     const { title } = useParams();
     const [searchList, setSearchList] = useState([]);
-    console.log(searchList);
+    
     useEffect(() => {
         searchService.searchTitle(title)
             .then(result => {
