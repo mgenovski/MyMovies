@@ -13,20 +13,20 @@ Pre-Interview Assignment
 - MongoDB / Mongoose
 
 ### Endpoints:
-  1. /search
+  - /search
     - GET - /search/:title - Search movies by title
-  2. /movie
+  - /movie
     - GET - /movie/:movieId - Get movie data by movie id
-  3. /favorites
+  - /favorites
     - GET - /favorites - Get all favorites
     - POST - /favorites - Add movie to favorites. Request body: { movieId, imgUrl }.
     - DELETE - /favorites/:movieId - Delete a movie from favorites
-  4. /ratings
+  - /ratings
     - GET - /ratings - Get all ratings
     - POST - /ratings - Add or change rating. Request body: { movieId, rating }
     - GET - /ratings/:movieId - Get rating by movie id
     - DELETE - /ratings/:movieId - Delete rating
-  5. /notes
+  - /notes
     - GET - /notes - Get all notes
     - POST - /notes - Create or edit a note. Request body: { movieId, text }
     - GET - /notes/:movieId - Get note by movie id
